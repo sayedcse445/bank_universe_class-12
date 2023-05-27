@@ -1,17 +1,60 @@
-document.getElementById('btn-deposite').addEventListener('click', function() {
-  const depositeField = document.getElementById('depositeField');
-  
-  // Check if depositeField exists and its value is not null or empty
-  if (btn-deposite && deposite-Field.value.trim() !== '') {
-    const depositeAmmount = depositeField.value;
-    // Rest of your code using depositeAmmount...
-  } else {
-    console.error('Deposite field is empty or not found.');
-  }
-});
+document.getElementById('btn-deposite').addEventListener('click',function(){
+// Input Filed Dposite
+  const depositeFiled=document.getElementById('deposite-Field')
+  const depositeAmount=depositeFiled.value
+  const newDeposite=parseFloat(depositeAmount)
+  console.log (newDeposite);
+//Deposite Filed
+  const depositetotal=document.getElementById('deposite-total')
+  const depositeElemnt=depositetotal.innerText
+  const preDeposite=parseFloat(depositeElemnt)
+  console.log(preDeposite);
+//Total Deposite
+  const currentDeposite=newDeposite + preDeposite
+  depositetotal.innerText =currentDeposite
+  console.log(currentDeposite);
 
-// document.getElementById("btn-deposite").addEventListener('click',function(){
-//     const depositeField=document.getElementById('deposite-Field')
-//     const depositeAmmount=depositeField.value
-//     console.log(depositeAmmount);
-// })
+  
+  //Total Balance
+  const blancetotalElement=document.getElementById('blance-total')
+  const blanceString=blancetotalElement.innerText
+  const blancetotal=parseFloat(blanceString)
+  console.log(blancetotal);
+
+  const currentBlance=blancetotal +newDeposite
+  blancetotalElement.innerText=currentBlance
+  console.log(currentBlance);
+
+  depositeFiled.value= ""
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
